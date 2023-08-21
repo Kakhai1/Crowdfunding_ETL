@@ -1,0 +1,33 @@
+Category
+-
+Category_ID PK int
+Category string INDEX
+
+SubCategory
+-
+SubCategory_ID PK int
+Category string INDEX
+
+Crowdfunding
+-
+cf_id PK int
+contact_id FK - Contacts.contact_id
+company_name string
+description string
+goal float
+pledged float
+outcome string
+backers_count float
+country string
+currency double
+launched_date datetime
+end_date datetime
+category_id fk - Category.Category_ID
+subcategory_id fk - SubCategory.SubCategory_ID
+
+Contacts
+-
+contact_id pk int
+first_name string
+last_name string
+email string
